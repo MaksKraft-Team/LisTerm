@@ -5,6 +5,11 @@ It was designed to make working with remote servers faster, cleaner, and more en
 
 ---
 
+## ☕️ Support crator
+[buymeacoffee.com/makskraft](https://buymeacoffee.com/makskraft)
+
+---
+
 ## 🔐 Powerful SSH Client
 
 LisTerm provides a stable and secure SSH connection, allowing you to interact with remote servers effortlessly.  
