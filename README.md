@@ -1,16 +1,51 @@
-# listerm
+# LisTerm
 
-A new Flutter project.
+LisTerm is a modern, lightweight SSH client and code editor built with Flutter.  
+It was designed to make working with remote servers faster, cleaner, and more enjoyable.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🔐 Powerful SSH Client
 
-A few resources to get you started if this is your first Flutter project:
+LisTerm provides a stable and secure SSH connection, allowing you to interact with remote servers effortlessly.  
+Sessions are reliable, commands execute smoothly, and the interface keeps everything clear and accessible.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📂 Intuitive File Manager
+
+The built‑in file manager simplifies everyday tasks:  
+- Browse directories with a clean, minimal UI  
+- Rename and delete files directly on the server  
+- Distinguish between folders and files with intuitive icons  
+
+No need to type repetitive commands — LisTerm makes remote file management straightforward.
+
+---
+
+## 📝 Integrated Code Editor
+
+LisTerm includes a code editor with syntax highlighting:  
+- Supports Python and other languages via the `highlight` package  
+- Dark theme for comfortable long sessions  
+- Edit and save files directly on the server with a single click  
+
+This means you can open, modify, and push changes without leaving the app.
+
+---
+
+## 🎨 Modern Material UI
+
+LisTerm is built with Flutter’s Material UI, offering a clean and simple design:  
+- Rounded AppBars and smooth scrolling  
+- Dark theme for focus and comfort  
+- Intuitive controls that feel familiar and easy to use  
+
+The interface is minimal yet powerful, making LisTerm approachable even for new users.
+
+---
+
+## 🌟 Inspired by MobaXterm
+
+LisTerm was inspired by the convenience of **MobaXterm**, re‑imagined in a lightweight, cross‑platform form.  
+It brings the same spirit of simplicity and power — now available as a native Flutter desktop application.
