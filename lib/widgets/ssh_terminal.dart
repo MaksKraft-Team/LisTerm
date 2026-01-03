@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:typed_data';
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:xterm/xterm.dart';
 import 'package:dartssh2/dartssh2.dart';
@@ -77,11 +78,35 @@ class _SshTerminalState extends State<SshTerminal> {
         widget.connection.port,
       );
 
-      client = SSHClient(
-        socket,
-        username: widget.connection.username,
-        onPasswordRequest: () => widget.connection.password,
-      );
+      // Выбор метода аутентификации
+      if (widget.connection.privateKeyPath != null &&
+          widget.connection.privateKeyPath!.isNotEmpty) {
+        // 🔑 Подключение по ключу
+        terminal.write('Using private key authentication...\r\n');
+
+        final keyContent =
+            await File(widget.connection.privateKeyPath!).readAsString();
+
+        final keyPair = SSHKeyPair.fromPem(
+          keyContent,
+          widget.connection.passphrase,
+        );
+
+        client = SSHClient(
+          socket,
+          username: widget.connection.username,
+          identities: keyPair,
+        );
+      } else {
+        // 🔑 Подключение по паролю
+        terminal.write('Using password authentication...\r\n');
+
+        client = SSHClient(
+          socket,
+          username: widget.connection.username,
+          onPasswordRequest: () => widget.connection.password,
+        );
+      }
 
       widget.onConnected?.call(client!);
 
